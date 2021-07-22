@@ -11,7 +11,7 @@ public class Audit {
     private String login;
 
     @Column(name = "REQUEST_COUNT")
-    private int requestCount;
+    private long requestCount;
 
     public String getLogin() {
         return login;
@@ -21,7 +21,7 @@ public class Audit {
         this.login = login;
     }
 
-    public int getRequestCount() {
+    public long getRequestCount() {
         return requestCount;
     }
 

@@ -3,7 +3,7 @@ package com.github.loginapi.controller;
 import com.github.loginapi.model.Error;
 import com.github.loginapi.model.User;
 import com.github.loginapi.service.LoginService;
-import com.github.loginapi.service.error.UserNotFoundException;
+import com.github.loginapi.service.client.error.UserNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

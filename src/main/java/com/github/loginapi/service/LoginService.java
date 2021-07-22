@@ -18,8 +18,8 @@ public class LoginService {
     }
 
     public User getUser(String userLogin) {
-        auditRepository.incrementRequestCount(userLogin);
         final var user = githubApiClient.getUser(userLogin);
+        auditRepository.incrementRequestCount(userLogin);
         return businessGithubUserConverter.convertGithubUserToUser(user);
     }
 }

@@ -3,7 +3,7 @@ package com.github.loginapi.service.client;
 import com.github.loginapi.model.GithubUser;
 import com.github.loginapi.model.converters.GithubUserConverter;
 import com.github.loginapi.service.client.error.GithubApiClientException;
-import com.github.loginapi.service.error.UserNotFoundException;
+import com.github.loginapi.service.client.error.UserNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 

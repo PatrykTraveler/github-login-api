@@ -5,7 +5,7 @@ import com.github.loginapi.model.converters.JsonConverter;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
-public class JsonBodyHandler <T> implements HttpResponse.BodyHandler<T>{
+public class JsonBodyHandler<T> implements HttpResponse.BodyHandler<T> {
     private final JsonConverter<T> jsonConverter;
 
     public JsonBodyHandler(JsonConverter<T> jsonConverter) {

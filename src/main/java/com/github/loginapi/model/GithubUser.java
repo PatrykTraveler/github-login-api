@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.Instant;
+import java.util.Objects;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -66,6 +67,19 @@ public class GithubUser {
 
     public long getFollowers() {
         return followers;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GithubUser that = (GithubUser) o;
+        return id == that.id && publicRepos == that.publicRepos && followers == that.followers && Objects.equals(login, that.login) && Objects.equals(name, that.name) && Objects.equals(type, that.type) && Objects.equals(avatarUrl, that.avatarUrl) && Objects.equals(createdAt, that.createdAt);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, login, name, type, avatarUrl, createdAt, publicRepos, followers);
     }
 
     @Override
